@@ -7,7 +7,7 @@ interface RocketAPI {
 
   //@GET("buraya apiden gelecen url nin .com/ dan sonraki kısmını alıp buraya yapıştıracaksın")
 
-  @GET("v4/launches/latest")
+  @GET("v4/launches/")
 
     fun getRockets():Single<List<Rocket>>
 

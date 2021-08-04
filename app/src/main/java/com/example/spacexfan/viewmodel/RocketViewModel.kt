@@ -75,7 +75,7 @@ class RocketViewModel(application: Application) : BaseViewModel(application) {
                     }
                     override fun onError(e: Throwable) {
                         rocketLoading.value=false
-                        Log.d("myTag","error is here")
+                        Log.d("myTag","error is here: "+ e.message)
                         e.printStackTrace()
                     }
                 })

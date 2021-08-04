@@ -33,7 +33,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1.3"
             android:padding="2dp"
-            android:downloadUrl="@{rocket.links}"
             android:src="@mipmap/ic_rocket">
 
         </ImageView>

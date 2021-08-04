@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/veyse/StudioProjects/SpaceXFan2/app/src/main/res/layout/fragment_rocket_list.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/veyse/StudioProjects/SpaceXFan2/app/src/main/res/layout/item_rocket.xml" value="0.203125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1802536231884058" />
         <entry key="app/src/main/res/layout/fragment_favorites.xml" value="0.26856884057971014" />
         <entry key="app/src/main/res/layout/fragment_launches.xml" value="0.1621376811594203" />
