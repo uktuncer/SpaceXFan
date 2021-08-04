@@ -64,7 +64,14 @@ class RocketFragment : Fragment() {
 
                 rocketList.visibility=View.VISIBLE
                 rocketAdapter.updateRocketList(rockets)
-                Log.d("myTag","rockets : " + rockets.get(0).details)
+                if (rockets.isNullOrEmpty()) {
+                    for (rocket in rockets) {
+                        Log.d("myTag","rocket details are ${rocket.details}")
+                    }
+                } else {
+                    Log.d("myTag","rockets is empty: ")
+                }
+
                 rocketList.adapter?.notifyDataSetChanged()
             }
         })
