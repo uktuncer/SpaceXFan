@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+<variable
+    name="rocket"
+    type="com.example.spacexfan.model.Rocket" />
+
+        <variable
+            name="listener"
+            type="com.example.spacexfan.adapter.RocketClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:onClick="@{listener::onRocketClicked}"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/rocketUuidText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@{String.valueOf(rocket.uuid)}">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:padding="2dp"
+            android:downloadUrl="@{rocket.links}"
+            android:src="@mipmap/ic_rocket">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:padding="5dp"
+                android:text="@{rocket.name}">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:padding="5dp"
+                android:text="@{rocket.details}">
+
+            </TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

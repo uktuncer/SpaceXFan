@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/rocketFragment"
+        android:icon="@drawable/ic_rockets"
+        android:title="Rocket Info"
+        />
+
+    <item
+        android:id="@+id/favoritesFragment"
+        android:icon="@drawable/ic_favorites"
+        android:title="Favorites"
+
+        />
+
+    <item
+        android:id="@+id/launchesFragment"
+        android:icon="@drawable/ic_launches"
+        android:title="Upcoming Launches" />
+</menu>
