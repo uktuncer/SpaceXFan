@@ -32,6 +32,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.3"
+            android:downloadUrl="@{rocket.links.patch.small}"
             android:padding="2dp"
             android:src="@mipmap/ic_rocket">
 
