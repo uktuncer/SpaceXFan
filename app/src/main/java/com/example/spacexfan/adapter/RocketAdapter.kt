@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.spacexfan.R
 import com.example.spacexfan.databinding.ItemRocketBinding
 import com.example.spacexfan.model.Rocket
-import com.example.spacexfan.view.RocketFragment
 import com.example.spacexfan.view.RocketFragmentDirections
 import kotlinx.android.synthetic.main.item_rocket.view.*
 
