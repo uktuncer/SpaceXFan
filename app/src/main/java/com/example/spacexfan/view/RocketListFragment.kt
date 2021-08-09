@@ -8,9 +8,12 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.room.TypeConverter
 import com.example.spacexfan.R
 import com.example.spacexfan.databinding.FragmentRocketListBinding
+import com.example.spacexfan.service.RocketAPIService
 import com.example.spacexfan.viewmodel.RocketListViewModel
+import com.squareup.moshi.Moshi
 
 class RocketListFragment : Fragment() {
 
@@ -46,8 +49,8 @@ class RocketListFragment : Fragment() {
 
         observeLiveData()
     }
-/*
- @TypeConverter
+
+    @TypeConverter
     fun stringToLatLng(input: String?): RocketListFragment? =
         input?.let { Moshi.Builder().build().adapter(RocketListFragment::class.java).fromJson(it) }
 
@@ -55,9 +58,10 @@ class RocketListFragment : Fragment() {
     fun latLngToString(input: RocketListFragment): String? =
         Moshi.Builder().build().adapter(RocketListFragment::class.java).toJson(input)
 
- */
-
     private fun observeLiveData(){
+        val rocket=RocketAPIService()
+        rocket.getData()
+
         viewModel.rocketListLiveData.observe(viewLifecycleOwner, Observer { rocket ->
             rocket?.let {
                 dataBinding.selectedRocket = rocket
